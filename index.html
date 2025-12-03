@@ -1,1 +1,1856 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yogesh Kumar | Product & Program Leader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Yogesh Kumar – Senior Product & Program Manager specializing in data governance, privacy, and AI platforms." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #070b1e;
+      --card-bg: rgba(14, 24, 47, 0.9);
+      --card-border: rgba(255, 255, 255, 0.05);
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.2);
+      --accent-2: #a855f7;
+      --accent-3: #22c55e;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-muted: #6b7280;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.6);
+      --radius-xl: 22px;
+      --radius-pill: 999px;
+      --nav-height: 70px;
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.25s ease-out;
+      --glass-blur: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, #1e293b 0, transparent 50%),
+        radial-gradient(circle at 100% 0%, #0f172a 0, transparent 50%),
+        radial-gradient(circle at 0% 100%, #111827 0, transparent 45%),
+        radial-gradient(circle at 100% 100%, #1f2937 0, transparent 45%),
+        linear-gradient(145deg, #020617, #020617);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Decorative grid background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 60%);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: -3;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 16px 64px;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      margin-bottom: 18px;
+      backdrop-filter: blur(26px);
+      background: linear-gradient(
+        to right,
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.9)
+      );
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.95);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 0 0, #38bdf8, #6366f1 40%, #a855f7 80%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.75);
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title-main {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-title-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-link span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at top, rgba(59, 130, 246, 0.34), transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: #f9fafb;
+      transform: translateY(-1px);
+    }
+
+    .nav-link:hover::before {
+      opacity: 1;
+    }
+
+    .nav-link.active {
+      color: #f9fafb;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(52, 211, 153, 0.5);
+      background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.32), transparent 60%);
+      color: #bbf7d0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .nav-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 16px rgba(34, 197, 94, 0.9);
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(59, 130, 246, 0.7);
+      background: radial-gradient(circle at top, rgba(59, 130, 246, 0.7), rgba(79, 70, 229, 0.75));
+      color: white;
+      font-size: 11px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 14px 40px rgba(37, 99, 235, 0.9);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-1px) translateX(0.5px);
+      box-shadow: 0 18px 55px rgba(37, 99, 235, 0.98);
+      filter: brightness(1.03);
+    }
+
+    .nav-btn-icon {
+      font-size: 14px;
+      margin-bottom: 1px;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 26px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      padding: 24px 22px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--card-border);
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(109, 40, 217, 0.22), transparent 60%),
+                  linear-gradient(to bottom right, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96));
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at 0 100%, rgba(56, 189, 248, 0.06), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pill {
+      font-size: 11px;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #a3e635);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero-pill strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-heading {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 18px;
+    }
+
+    .hero-name {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-name span {
+      background: linear-gradient(120deg, #e5e7eb, #93c5fd, #a855f7);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-role {
+      font-size: 15px;
+      margin-top: 4px;
+      color: #cbd5f5;
+    }
+
+    .hero-tagline {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--text-soft);
+      max-width: 440px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .meta-item {
+      font-size: 12px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-soft);
+    }
+
+    .meta-icon {
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background var(--transition-med), transform var(--transition-fast), box-shadow var(--transition-med), border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      border-color: rgba(59, 130, 246, 0.8);
+      background: radial-gradient(circle at top, #3b82f6, #4f46e5);
+      color: #f9fafb;
+      box-shadow: 0 16px 45px rgba(37, 99, 235, 0.95);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 1);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.72);
+      color: var(--text-soft);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+    }
+
+    .btn-icon {
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .hero-footnote {
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-footnote span.badge {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.18);
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      color: #bbf7d0;
+      font-size: 10px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .hero-aside {
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 20px;
+      border: 1px solid var(--card-border);
+      background: linear-gradient(140deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.98));
+      backdrop-filter: blur(var(--glass-blur));
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-aside::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at 0 100%, rgba(56, 189, 248, 0.15), transparent 55%);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .badge-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-chip {
+      font-size: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+    }
+
+    .hero-summary {
+      position: relative;
+      z-index: 1;
+      padding: 10px 11px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.96));
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .hero-summary strong {
+      color: #e5e7eb;
+    }
+
+    .hero-metrics {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .metric-card {
+      padding: 8px 9px;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 11px;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .metric-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .metric-sub {
+      font-size: 10px;
+      color: var(--text-soft);
+    }
+
+    .hero-links {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-links a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    .hero-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION BASICS */
+    section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #cbd5f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span.marker {
+      width: 8px;
+      height: 20px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #3b82f6, #a855f7);
+      box-shadow: 0 0 16px rgba(59, 130, 246, 0.95);
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* EXPERIENCE */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+      gap: 18px;
+    }
+
+    .card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--card-border);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.98));
+      backdrop-filter: blur(var(--glass-blur));
+      padding: 16px 16px 18px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at 100% 0, rgba(56, 189, 248, 0.08), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 3fr);
+      gap: 10px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(51, 65, 85, 0.85);
+      transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      cursor: default;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-1px);
+      border-color: rgba(96, 165, 250, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .timeline-meta {
+      font-size: 11px;
+    }
+
+    .timeline-company {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .timeline-role {
+      font-size: 11px;
+      color: #93c5fd;
+    }
+
+    .timeline-location,
+    .timeline-dates {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .timeline-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .timeline-badge {
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(30, 64, 175, 0.5);
+      color: #dbeafe;
+      border: 1px solid rgba(59, 130, 246, 0.8);
+    }
+
+    .timeline-content {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .timeline-content ul {
+      padding-left: 16px;
+      margin: 2px 0;
+    }
+
+    .timeline-content li {
+      margin-bottom: 4px;
+    }
+
+    .experience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    .tag-pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-soft);
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .tag-pill:hover {
+      transform: translateY(-1px);
+      border-color: rgba(59, 130, 246, 0.8);
+      color: #e5e7eb;
+    }
+
+    .tag-pill.active {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: rgba(59, 130, 246, 0.92);
+      color: #bfdbfe;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .chip-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      color: #e5e7eb;
+      backdrop-filter: blur(10px);
+    }
+
+    .skills-list {
+      font-size: 11px;
+      color: var(--text-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 12px;
+    }
+
+    .skills-list ul {
+      padding-left: 16px;
+    }
+
+    .skills-list li {
+      margin-bottom: 4px;
+    }
+
+    .progress-row {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 7px;
+    }
+
+    .progress-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .progress-bar {
+      height: 4px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(30, 64, 175, 0.7);
+      margin-top: 3px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #3b82f6, #a855f7, #22c55e);
+      width: 0;
+      transition: width 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    /* EDUCATION, CERTS, COMMUNITY */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .edu-item {
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .edu-school {
+      font-weight: 500;
+    }
+
+    .edu-degree {
+      font-size: 11px;
+      color: #93c5fd;
+    }
+
+    .list-compact {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .list-compact ul {
+      padding-left: 16px;
+    }
+
+    .list-compact li {
+      margin-bottom: 4px;
+    }
+
+    /* COURSES */
+    .scroll-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+      font-size: 11px;
+    }
+
+    .scroll-row::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .scroll-row::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scroll-row::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.6);
+      border-radius: 999px;
+    }
+
+    .course-pill {
+      flex: 0 0 auto;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-soft);
+      white-space: nowrap;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .contact-row a {
+      color: #bfdbfe;
+      text-decoration: none;
+    }
+
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+
+    .availability {
+      font-size: 11px;
+      margin-top: 8px;
+      color: var(--text-soft);
+    }
+
+    .availability strong {
+      color: #e5e7eb;
+    }
+
+    .contact-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .field label {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .field input,
+    .field textarea {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 12px;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      padding: 7px 10px;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 12px;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(59, 130, 246, 0.9);
+      box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.6);
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    .field textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .note-muted {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: -2px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer a {
+      color: #9ca3ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* SCROLL TO TOP */
+    .scroll-top {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+      z-index: 40;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ANIMATIONS ON SCROLL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .experience-grid,
+      .skills-grid,
+      .two-col,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-main {
+        order: 2;
+      }
+      .hero-aside {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        padding: 9px 12px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 54px;
+        left: 8px;
+        right: 8px;
+        border-radius: 18px;
+        background: rgba(15, 23, 42, 0.96);
+        border: 1px solid rgba(30, 64, 175, 0.9);
+        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.98);
+        padding: 10px 12px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-4px);
+        transition: opacity var(--transition-fast), transform var(--transition-fast);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        margin-top: 18px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding-inline: 12px;
+      }
+      .hero-main,
+      .hero-aside,
+      .card {
+        padding-inline: 14px;
+      }
+
+      .skills-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .timeline-item {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="top" class="page">
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-logo">YK</div>
+        <div class="nav-title">
+          <div class="nav-title-main">Yogesh Kumar</div>
+          <div class="nav-title-sub">Product & Program Leadership · Data, Privacy & AI</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><span>About</span></a>
+        <a href="#experience" class="nav-link"><span>Experience</span></a>
+        <a href="#skills" class="nav-link"><span>Skills</span></a>
+        <a href="#education" class="nav-link"><span>Education</span></a>
+        <a href="#community" class="nav-link"><span>Community</span></a>
+        <a href="#contact" class="nav-link"><span>Contact</span></a>
+      </div>
+
+      <div class="nav-cta">
+        <div class="nav-pill">
+          <span class="nav-pill-dot"></span>
+          Open to product & data platform roles
+        </div>
+        <a class="nav-btn" href="#contact">
+          <span class="nav-btn-icon">✉️</span>
+          <span>Contact</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-main reveal">
+        <div class="hero-pill-row">
+          <div class="hero-pill">
+            <span class="dot"></span>
+            <strong>Senior Product & Program Leader</strong>
+          </div>
+          <div class="hero-pill">
+            15+ years across Walmart, Amazon, AT&T & Nokia
+          </div>
+        </div>
+
+        <div class="hero-heading">
+          <div class="hero-name">
+            Hi, I'm <span>Yogesh Kumar</span>
+          </div>
+          <div class="hero-role">
+            Senior Product / Program Manager · Data Governance & AI Platforms
+          </div>
+          <p class="hero-tagline">
+            I help organizations build privacy-first, compliant, and scalable data & AI platforms that unlock business value while protecting customers and partners.
+          </p>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-icon">📍</span>
+            Dixon, California (Bay Area)
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">📧</span>
+            <a href="mailto:yogesh.1.kumar@gmail.com" style="color:#bfdbfe;text-decoration:none;">
+              yogesh.1.kumar@gmail.com
+            </a>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🔗</span>
+            <a href="https://www.linkedin.com/in/ykumar/" target="_blank" rel="noopener" style="color:#bfdbfe;text-decoration:none;">
+              linkedin.com/in/ykumar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            <span class="btn-icon">💬</span>
+            Let's talk opportunities
+          </a>
+          <a href="#experience" class="btn-ghost">
+            <span class="btn-icon">📂</span>
+            View experience
+          </a>
+        </div>
+
+        <div class="hero-footnote">
+          <span class="badge">Actively exploring new roles</span>
+          <span>
+            Focus: product leadership for data platforms, privacy-by-design, and AI/ML governance.
+          </span>
+        </div>
+      </div>
+
+      <aside class="hero-aside reveal">
+        <div class="badge-stack">
+          <div class="badge-chip">
+            <span class="badge-dot"></span>
+            Data Governance & Privacy
+          </div>
+          <div class="badge-chip">
+            <span class="badge-dot"></span>
+            Analytics & AI Platforms
+          </div>
+          <div class="badge-chip">
+            <span class="badge-dot"></span>
+            Product & Program Strategy
+          </div>
+        </div>
+
+        <div class="hero-summary">
+          An accomplished, results-driven leader with deep experience across consumer data privacy, information security, regulatory compliance, and third-party data handling. Adept at aligning stakeholders, designing scalable systems, and delivering measurable business outcomes.
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <div class="metric-label">Leadership</div>
+            <div class="metric-value">15+ yrs</div>
+            <div class="metric-sub">Product & program across Fortune 100</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Impact</div>
+            <div class="metric-value">$11M+</div>
+            <div class="metric-sub">Annual savings at Amazon</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Scale</div>
+            <div class="metric-value">100+ teams</div>
+            <div class="metric-sub">Supported at Walmart & Amazon</div>
+          </div>
+        </div>
+
+        <div class="hero-links">
+          <span>Currently: Senior Manager, Product / Program – Walmart (2020–2025)</span>
+          <span>Previously: Amazon · AT&T Wireless · Nokia</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="marker"></span>
+          Experience
+        </div>
+        <div class="section-subtitle">
+          Product & program leadership across data, privacy, and large-scale platforms.
+        </div>
+      </div>
+
+      <div class="experience-grid">
+        <div class="card reveal">
+          <div class="card-inner">
+            <div class="experience-tags" id="experienceFilters">
+              <button class="tag-pill active" data-filter="all">All</button>
+              <button class="tag-pill" data-filter="data">Data Platforms</button>
+              <button class="tag-pill" data-filter="privacy">Privacy & Compliance</button>
+              <button class="tag-pill" data-filter="ai">AI / ML & Analytics</button>
+            </div>
+
+            <div class="timeline" id="experienceTimeline">
+              <!-- Walmart -->
+              <article class="timeline-item" data-tags="data privacy ai">
+                <div class="timeline-meta">
+                  <div class="timeline-company">Walmart · Sunnyvale, California</div>
+                  <div class="timeline-role">Senior Manager, Product / Program Management</div>
+                  <div class="timeline-location">2020 – 2025</div>
+                  <div class="timeline-badges">
+                    <span class="timeline-badge">Data Governance & Compliance</span>
+                    <span class="timeline-badge">AI/ML Risk</span>
+                    <span class="timeline-badge">GCP Migration</span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <ul>
+                    <li>Led data governance and compliance efforts to enhance consumer data privacy, regulatory compliance, and third-party data handling.</li>
+                    <li>Designed technical and process controls for antitrust, cross-border data sharing, and contractual commitments.</li>
+                    <li>Created a compliance framework for B2B data sharing and AI/ML risk assessments adopted across 100+ internal tech teams and 5 Walmart-owned brands.</li>
+                    <li>Modernized analytics platform by migrating from SQL Server to Google Cloud; introduced clickstream observability solutions.</li>
+                    <li>Promoted privacy-by-design through white papers and executive presentations.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Amazon -->
+              <article class="timeline-item" data-tags="data ai">
+                <div class="timeline-meta">
+                  <div class="timeline-company">Amazon · Seattle, Washington</div>
+                  <div class="timeline-role">Technical Product / Program Lead</div>
+                  <div class="timeline-location">2015 – 2019</div>
+                  <div class="timeline-badges">
+                    <span class="timeline-badge">Clickstream Platform</span>
+                    <span class="timeline-badge">Data Strategy</span>
+                    <span class="timeline-badge">AWS</span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <ul>
+                    <li>Delivered datasets to 100+ teams across global retail services, enabling analytics, AI/ML, and BI workloads.</li>
+                    <li>Developed long-term strategy for the Clickstream platform and supported migrations to Redshift and EMR.</li>
+                    <li>Led migration of Oracle DW to AWS, realizing $11M annual savings and improving metric accuracy by 5–10%.</li>
+                    <li>Drove $1M+ savings through data quality improvements and operational excellence.</li>
+                    <li>Managed browser add-ons with 5M+ downloads and launched customer engagement features that significantly increased engagement.</li>
+                    <li>Oversaw strategic accounts supporting 30M mobile devices and ~$3B channel sales; integrated Amazon apps into Android OEM/carrier ecosystems.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- AT&T -->
+              <article class="timeline-item" data-tags="data">
+                <div class="timeline-meta">
+                  <div class="timeline-company">AT&T Wireless · Redmond, Washington</div>
+                  <div class="timeline-role">Senior Technical Program Manager</div>
+                  <div class="timeline-location">2010 – 2015</div>
+                  <div class="timeline-badges">
+                    <span class="timeline-badge">Enterprise Mobility</span>
+                    <span class="timeline-badge">Mobile Payments</span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <ul>
+                    <li>Executed trials and strategic planning for enterprise mobility, mobile payments, IP messaging, and app preloads.</li>
+                    <li>Led cross-functional resolution of performance issues spanning product, engineering, and operations.</li>
+                    <li>Managed launch of white-labeled location and social networking apps on Android.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Nokia -->
+              <article class="timeline-item" data-tags="data">
+                <div class="timeline-meta">
+                  <div class="timeline-company">Nokia · Finland · China · U.S. · India</div>
+                  <div class="timeline-role">Technology, Business Development, and Software Development Roles</div>
+                  <div class="timeline-location">1996 – 2007</div>
+                  <div class="timeline-badges">
+                    <span class="timeline-badge">Global Markets</span>
+                    <span class="timeline-badge">Product & BD</span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <ul>
+                    <li>Held various technology, business development, and software development roles across multiple regions, building a strong foundation in mobile ecosystems and global product launches.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:6px;">What I bring</h3>
+            <p style="font-size:12px;color:var(--text-soft);margin-bottom:10px;">
+              I sit at the intersection of product strategy, data platforms, and regulatory compliance. My work spans designing data platforms, embedding privacy-by-design, and partnering with engineering, legal, and business teams to ship outcomes that hold up under scrutiny.
+            </p>
+
+            <div class="list-compact" style="margin-bottom:10px;">
+              <ul>
+                <li><strong>Product leadership:</strong> Vision, roadmaps, and execution for data & AI platforms supporting hundreds of internal teams.</li>
+                <li><strong>Governance & compliance:</strong> Frameworks that bridge legal requirements (GDPR, CCPA, antitrust) with technical implementation.</li>
+                <li><strong>Data & AI foundations:</strong> Platforms for analytics, clickstream, and AI/ML workloads, from strategy to rollout.</li>
+                <li><strong>Stakeholder alignment:</strong> Comfortable working with C-level leaders, engineers, lawyers, and external partners.</li>
+              </ul>
+            </div>
+
+            <div class="list-compact">
+              <h4 style="font-size:12px;font-weight:500;margin-bottom:4px;">Target roles</h4>
+              <ul>
+                <li>Senior / Principal Product Manager – Data, Privacy, or AI Platforms</li>
+                <li>Group Product Manager – Data Governance, Compliance & AI</li>
+                <li>Senior Program Manager – Large-Scale Data & Platform Initiatives</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="marker"></span>
+          Skills & Strengths
+        </div>
+        <div class="section-subtitle">
+          Product, program, and technical depth across data, cloud, and AI tooling.
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:6px;">Core Competencies</h3>
+            <div class="chip-cloud" style="margin-bottom:8px;">
+              <span class="chip">Product Management</span>
+              <span class="chip">Program Management</span>
+              <span class="chip">Strategic Thinking</span>
+              <span class="chip">Stakeholder Alignment</span>
+              <span class="chip">Roadmap Planning</span>
+              <span class="chip">System Design</span>
+              <span class="chip">Technical Architecture</span>
+              <span class="chip">Customer-Centric Mindset</span>
+              <span class="chip">Design Thinking</span>
+              <span class="chip">Data-Driven Decisions</span>
+              <span class="chip">OKRs / KPIs</span>
+              <span class="chip">Data Governance</span>
+              <span class="chip">Privacy by Design</span>
+              <span class="chip">Antitrust & Compliance</span>
+              <span class="chip">GDPR / CCPA / DSRs</span>
+            </div>
+
+            <h3 style="font-size:13px;font-weight:600;margin:10px 0 6px;">Technical Skills</h3>
+            <div class="chip-cloud">
+              <span class="chip">AWS</span>
+              <span class="chip">Google Cloud</span>
+              <span class="chip">LLMs</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">Pydantic</span>
+              <span class="chip">Jupyter</span>
+              <span class="chip">Agentic AI</span>
+              <span class="chip">Prompt Engineering</span>
+              <span class="chip">RAG</span>
+              <span class="chip">React</span>
+              <span class="chip">Dart</span>
+              <span class="chip">Flutter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:6px;">How I work</h3>
+            <div class="skills-list">
+              <div>
+                <ul>
+                  <li>Translate ambiguous problems into structured product strategies.</li>
+                  <li>Balance regulatory requirements with pragmatic technical solutions.</li>
+                  <li>Partner closely with engineering and legal to de-risk launches.</li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>Use data deeply in prioritization and roadmap planning.</li>
+                  <li>Design platforms that scale across teams, regions, and use cases.</li>
+                  <li>Communicate clearly with executives and technical stakeholders.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="progress-row" id="progressRow">
+              <div>
+                <div class="progress-item">
+                  <span>Data & AI platform strategy</span>
+                  <span>Expert</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="92"></div>
+                </div>
+              </div>
+              <div>
+                <div class="progress-item">
+                  <span>Privacy, compliance & governance</span>
+                  <span>Expert</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div>
+                <div class="progress-item">
+                  <span>Stakeholder & executive alignment</span>
+                  <span>Expert</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="93"></div>
+                </div>
+              </div>
+              <div>
+                <div class="progress-item">
+                  <span>Hands-on with data & AI tools</span>
+                  <span>Strong</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="82"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="note-muted">
+              (Self-assessed skill levels to help you quickly understand strengths across leadership, governance, and technical execution.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="marker"></span>
+          Education & Certifications
+        </div>
+        <div class="section-subtitle">
+          Business, engineering, and continuous learning in data & AI.
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:8px;">Education</h3>
+            <div class="edu-item">
+              <div class="edu-school">Rutgers University · Newark, New Jersey</div>
+              <div class="edu-degree">Executive M.B.A.</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-school">Delhi Technological University · Delhi, India</div>
+              <div class="edu-degree">B.E., Electronics & Communications</div>
+            </div>
+
+            <p style="font-size:11px;color:var(--text-soft);margin-top:6px;">
+              This combination of business and engineering training underpins a pragmatic, systems-level approach to product and platform leadership.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:8px;">Certifications & Professional Development</h3>
+            <div class="list-compact">
+              <ul>
+                <li><strong>NVIDIA</strong> (2025)</li>
+                <li><strong>Google Cloud Digital Leader</strong> (2024)</li>
+                <li><strong>MIT School of Engineering:</strong> Data Science & Big Data Analytics (2015–2018)</li>
+                <li><strong>IDEO:</strong> Insights for Innovation, From Ideas to Action, Leading for Creativity (2015–2018)</li>
+                <li><strong>Y Combinator Startup Founder Program</strong> (2022)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY & COURSES -->
+    <section id="community">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="marker"></span>
+          Community & Continuous Learning
+        </div>
+        <div class="section-subtitle">
+          Giving back and staying current with modern AI and data practices.
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:8px;">Community Involvement</h3>
+            <div class="list-compact">
+              <ul>
+                <li><strong>Master Gardener Program — UC Davis</strong> (2024)</li>
+                <li><strong>Seattle Mountain Rescue</strong> (2015–2020)</li>
+                <li><strong>Outdoor Skills Volunteer — The Mountaineers</strong> (2011–2020)</li>
+              </ul>
+            </div>
+            <p style="font-size:11px;color:var(--text-soft);margin-top:6px;">
+              Outside of work, I enjoy contributing to community programs, mentoring, and building resilience in both people and systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:8px;">Recent Courses & Trainings</h3>
+            <div class="scroll-row">
+              <span class="course-pill">Building Agentic AI Applications with LLMs</span>
+              <span class="course-pill">Building RAG Agents with LLMs</span>
+              <span class="course-pill">Building Conversational AI Applications</span>
+              <span class="course-pill">Building LLM Applications with Prompt Engineering</span>
+              <span class="course-pill">Rapid Application Development with LLMs</span>
+              <span class="course-pill">Efficient LLM Customization</span>
+              <span class="course-pill">Fundamentals of Accelerated Data Science</span>
+              <span class="course-pill">Getting Started with Deep Learning</span>
+            </div>
+            <p style="font-size:11px;color:var(--text-soft);margin-top:8px;">
+              These programs reflect a deep, ongoing focus on AI, LLMs, and modern data science workflows — not just as buzzwords, but as practical tools for building responsible products.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="marker"></span>
+          Contact
+        </div>
+        <div class="section-subtitle">
+          Ready to discuss product, data platform, and AI governance opportunities.
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:6px;">Let’s connect</h3>
+            <p style="font-size:12px;color:var(--text-soft);">
+              If you’re building data or AI platforms that must be scalable, compliant, and privacy-first, I’d be glad to explore how I can help.
+            </p>
+
+            <div class="contact-row">
+              <div>
+                <strong>Email</strong><br />
+                <a href="mailto:yogesh.1.kumar@gmail.com">yogesh.1.kumar@gmail.com</a>
+              </div>
+              <div>
+                <strong>LinkedIn</strong><br />
+                <a href="https://www.linkedin.com/in/ykumar/" target="_blank" rel="noopener">
+                  linkedin.com/in/ykumar
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row" style="margin-top:6px;">
+              <div>
+                <strong>Location</strong><br />
+                Dixon, California 95620 (Bay Area)
+              </div>
+              <div>
+                <strong>Phone</strong><br />
+                <a href="tel:+14252137261">+1 (425) 213-7261</a>
+              </div>
+            </div>
+
+            <p class="availability">
+              <strong>Availability:</strong> Open to senior / principal product, program, and data platform roles in the U.S. (onsite, hybrid, or remote).
+            </p>
+
+            <p class="contact-note">
+              Please feel free to reach out with a short note about the opportunity and your team’s priorities. I’m happy to share more details or dive into specific initiatives.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-inner">
+            <h3 style="font-size:13px;font-weight:600;margin-bottom:6px;">Quick note (non-functional demo)</h3>
+            <p class="note-muted">
+              This form is a UI demo. To contact Yogesh, please use the email or LinkedIn links on the left.
+            </p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a portfolio demo. Please contact Yogesh via email or LinkedIn.');">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" type="text" placeholder="Hiring manager / Recruiter / Founder" />
+              </div>
+              <div class="field">
+                <label for="company">Company / Team</label>
+                <input id="company" type="text" placeholder="Company or team name" />
+              </div>
+              <div class="field">
+                <label for="role">Role or opportunity</label>
+                <input id="role" type="text" placeholder="e.g., Senior PM – Data Platform" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Share a bit about your needs, the team, and timelines."></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width:fit-content;margin-top:2px;">
+                <span class="btn-icon">🚀</span>
+                Preview message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span>© <span id="year"></span> Yogesh Kumar. All rights reserved.</span>
+      <span>Built as a lightweight, single-page portfolio for product & data platform roles.</span>
+    </footer>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // Close nav on link click (mobile)
+    navLinks.addEventListener("click", (e) => {
+      if (e.target.closest("a")) {
+        navLinks.classList.remove("open");
+      }
+    });
+
+    // Smooth scrolling & active link highlight
+    const navAnchors = document.querySelectorAll(".nav-link");
+    const sections = [...document.querySelectorAll("section")];
+
+    function setActiveLink() {
+      let currentId = "";
+      const scrollY = window.scrollY + 120;
+
+      for (const section of sections) {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollY >= top && scrollY < top + height) {
+          currentId = section.id;
+          break;
+        }
+      }
+
+      navAnchors.forEach((a) => {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
+      });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 250) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    // Experience filters
+    const filterButtons = document.querySelectorAll("#experienceFilters .tag-pill");
+    const experienceItems = document.querySelectorAll("#experienceTimeline .timeline-item");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        experienceItems.forEach((item) => {
+          if (filter === "all") {
+            item.style.display = "";
+          } else {
+            const tags = item.getAttribute("data-tags") || "";
+            item.style.display = tags.includes(filter) ? "" : "none";
+          }
+        });
+      });
+    });
+
+    // Progress bars animation
+    const progressFills = document.querySelectorAll(".progress-fill");
+    const progressRow = document.getElementById("progressRow");
+
+    const progressObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            progressFills.forEach((fill) => {
+              const width = fill.getAttribute("data-width");
+              fill.style.width = width + "%";
+            });
+            progressObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    if (progressRow) {
+      progressObserver.observe(progressRow);
+    }
+
+    // Dynamic year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
